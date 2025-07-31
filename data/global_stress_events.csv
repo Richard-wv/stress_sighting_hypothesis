@@ -1,4 +1,4 @@
-id,Year,Event,Category,Region,Severity (1-5),Notes
+id,year,event,category,region,severity_(1-5),notes
 1,1947,Roswell Incident,Cultural,US,2,Key event in UFO mythology; public fascination began
 2,1950,Korean War Begins,War,Asia/Global,4,Cold War era conflict that escalated nuclear fears
 3,1957,Launch of Sputnik,Tech/Political,Global,3,Cold War space race tensions rise
