@@ -51,9 +51,40 @@ Whilst not exhaustive, this dataset serves as a representative proxy for fluctua
 Severity ratings were assigned subjectively, based on the perceived scale and psychological weight of each event, and are intended to offer an optional variable for weighted analysis. 
 
 ## Business Requirements
+In an era shaped by information saturation, political polarisation, and global crises, public perception is increasingly complex and emotionally charged. For journalists, researchers, and communicators, understanding how people respond to uncertainty is as important as the events themselves.
+
+This project explores the potential relationship between **reported UFO sightings** and **global stress events**, not to investigate extraterrestrial phenomena, but to examine whether these sightings reflect **underlying patterns of public anxiety, media influence, and cultural tension.**
+
+The outcome is a data-driven dashboard designed to support those working at the intersection of **data**, **storytelling**, and **public insight**.
+
 ### Persona & User Story:
 ![Alex Holloway – Persona Card](images/alex_holloway_persona_card.png)
 
+**Alex Holloway** is an investigative journalist, known for in-depth features that combine cultural analysis with data storytelling. They work with both independent media outlets and major publishers, seeking to explore how society processes uncertainty — from political unrest to media myths.
+
+### Alex's Requirements:
+- **Reveal Patterns**
+
+Alex needs to identify correlations between historical periods of stress and spikes in UFO reporting - fast, clearly and without technical issues. 
+
+- **Narrative Context**
+
+They want to explore not just *when* things happened, but *why it matters.* Explanatory text and annotations support deeper storytelling.
+
+- **Usable Insights**
+
+Our charts and summaries must be easy to extract for use in articles or reports, including explanatory captions and legends.
+
+- **Trustworthy Structure**
+
+The data pipeline must be transparent, ethical and well-documented to ensure and maintain credibility in their journalistic work.
+
+### Value Proposition:
+Our Dashboard must empower users like Alex to:
+- Translate complex data into cultural insight
+- Frame journalistic stories with empirical evidence
+- Uncover social signals hiding in unconventional data
+- Offer the audience a grounded perspective on how fear, media, and uncertainty intersect. 
 
 ## Hypothesis and how to validate?
 * List here your project hypothesis(es) and how you envision validating it (them) 
