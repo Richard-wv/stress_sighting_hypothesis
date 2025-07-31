@@ -51,7 +51,8 @@ Whilst not exhaustive, this dataset serves as a representative proxy for fluctua
 Severity ratings were assigned subjectively, based on the perceived scale and psychological weight of each event, and are intended to offer an optional variable for weighted analysis. 
 
 ## Business Requirements
-* Describe your business requirements
+### Persona & User Story:
+![Alex Holloway – Persona Card](images/alex_holloway_persona_card.png)
 
 
 ## Hypothesis and how to validate?
