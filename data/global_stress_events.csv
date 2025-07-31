@@ -1,0 +1,36 @@
+id,Year,Event,Category,Region,Severity (1-5),Notes
+1,1947,Roswell Incident,Cultural,US,2,Key event in UFO mythology; public fascination began
+2,1950,Korean War Begins,War,Asia/Global,4,Cold War era conflict that escalated nuclear fears
+3,1957,Launch of Sputnik,Tech/Political,Global,3,Cold War space race tensions rise
+4,1962,Cuban Missile Crisis,Political,Global,5,Closest point to nuclear war
+5,1965,Vietnam War Escalates,War,Asia/US,4,"Mass Protest, global media coverage, deep public unrest"
+6,1969,Moon Landing,Cultural,Global,3,Heightened space fascination and speculation
+7,1973,Oil Crisis Begins,Economic,Global,4,"Fuel shortages, inflation, unrest"
+8,1977,Release of Close Encounters,Cultural,Global,1,Popularised UFOs in mainstream media
+9,1982,E.T. the Extra-Terrestrial Released,Cultural,Global,2,Global box office hit; shifted alien narrative toward empathy and wonder
+10,1986,Chernobyl Disaster,Environmental,Europe,4,Massive nuclear fear and cover-up concerns
+11,1989,Fall of Berlin Wall,Political,Europe,3,"Geopolitical restructuring, global tension shift"
+12,1991,Gulf War Begins,War,Middle East/US,4,"Heavy media coverage, aerial warfare focus"
+13,1993,Waco Siege,Political,US,2,"Domestic unrest, government distrust spikes"
+14,1993,X-Files TV Show Premieres,Cultural,Global,2,Long-running cultural influence on UFO and government secrecy themes 
+15,1995,Oklahoma City Bombing,Terrorism,US,3,"Domestic terrorism, fear of extremism"
+16,1996,Independence Day Film,Cultural,Global,1,Blockbuster alien invasion film
+17,1997,Heaven's Gate Suicides,Cultural,US,2,UFO cult mass suicide linked to Hale-Bopp comet
+18,1999,Y2K Panic,Tech,Global,3,Widespread fear of tech collapse
+19,2001,9/11 Terror Attacks,Terrorism,Global,5,Massive global psychological impact
+20,2003,Iraq War Begins,War,Global,4,"Anti-war protests, fear of global instability"
+21,2004,Indian Ocean Tsunami,Disaster,Asia,4,"Massive loss of life, global humanitarian response"
+22,2008,Global Financial Crisis,Economic,Global,5,"Widespread unemployment, housing collapse"
+23,2010,Haiti Earthquake,Disaster,Americas,3,"Media-heavy coverage, humanitarian crisis"
+24,2011,Arab Spring Begins,Political,Middle East,4,Uprisings and major instability
+25,2011,Fukushima Disaster,Environmental,Asia,4,Nuclear crisis and fear of radiation
+26,2012,Mayan Apocalypse Prediction,Cultural,Global,2,Public anxiety over end-of-world prophecy
+27,2014,Crimea Annexation,Political,Europe,3,Tensions between Russia and West increase
+28,2016,Brexit Referendum,Political,UK,3,National uncertainty and deep division
+29,2016,Trump Elected President,Political,US,3,Global reaction and polarisation
+30,2017,North Korea Missile Tensions,Military,Asia,4,Nuclear fears escalated by media
+31,2019,Notre-Dame Fire,Cultural,Europe,2,Global shock and symbolic destruction
+32,2020,COVID-19 Pandemic Begins,Health,Global,5,"Lockdowns, mass fear, health crisis"
+33,2020,Australian Bushfire Crisis,Environmental,Australia/Global,4,"One of the worst fire seasons; mass displacement, fear, and media attention globally"
+34,2022,Russia Invades Ukraine,War,Global,5,"War, inflation, nuclear fears"
+35,2023,ChatGPT Public Release,Tech/Cultural,Global,2,Public discourse on AI risk and ethics
