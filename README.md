@@ -1,4 +1,4 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ![Project Header Image](images/project_header_img.png)
 
 # The Stress-Sighting Hypothesis
 ### A Data-Driven Analysis of Global Events and Reports of the Unknown.
