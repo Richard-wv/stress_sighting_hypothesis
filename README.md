@@ -86,8 +86,34 @@ Our Dashboard must empower users like Alex to:
 - Uncover social signals hiding in unconventional data
 - Offer the audience a grounded perspective on how fear, media, and uncertainty intersect. 
 
-## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+## Hypotheses
+This project explores whether there is a measurable relationship between periods of global stress and the volume of reported UFO sightings. The following hypotheses will be tested using aggregated time-series data and statistical methods, including linear regression.
+
+### **H1: There is a positive correlation between the number of glabal stress events in a given year and the number of UFO sightings.**
+
+**Validation Approach:**
+- Aggregate UFO sightings by year
+- Count stress events per year from the global stress events dataset
+- Perform Pearson correlation and linear regression using stress_event_count as the independent variable
+- Visualise results with a scatter plot and regression line
+
+### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
+
+**Validation Approach:**
+- Sum severity scores per year (severity_sum)
+- Regress *sightings_per_year* against *severity_sum*
+- Compare R² and regression coefficients with **H1**
+- Visualise and interpret strength of correlation
+
+### **H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.**
+
+**Validation Approach:**
+
+- Flag key media release years in the dataset (e.g., The X-Files in 1993, Independence Day in 1996)
+- Visually inspect anomalies in *sightings_per_year* via time-series plots
+- Compare spike magnitudes to adjacent years to investigate temporal influence 
+
+---
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
