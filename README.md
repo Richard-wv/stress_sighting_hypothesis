@@ -189,7 +189,7 @@ Because this project is primarily concerned with **yearly patterns on a global s
 - MatPlotLib
 - Plotly
 - SKLearn
-
+- SciPy
 
 
 ## Credits 
