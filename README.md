@@ -182,7 +182,14 @@ Because this project is primarily concerned with **yearly patterns on a global s
 ## Deployment
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+- Python
+- Pandas
+- NumPy
+- Seaborne
+- MatPlotLib
+- Plotly
+- SKLearn
+
 
 
 ## Credits 
