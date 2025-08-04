@@ -116,9 +116,39 @@ This project explores whether there is a measurable relationship between periods
 ---
 
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+### Data Cleaning and Feature Engineering Summary
+
+The UFO dataset underwent comprehensive cleaning to ensure analytical reliability. Key steps included:
+
+- **Standardising column names** to lowercase with consistent formatting.
+- **Handling missing values:**
+  - Filled missing 'country', 'state', and 'shape' values with 'unknown'.
+  - Removed 694 rows (~0.86%) where 'datetime' was missing or malformed, resulting in invalid 'year' values.
+- **Cleaning problematic numeric columns:**
+  - Converted 'duration (seconds)' and 'latitude' to numeric using 'pd.to_numeric()' with coercion.
+  - Dropped 4 rows with invalid or non-numeric duration/latitude values.
+- **Ensuring valid data ranges:**
+  - Confirmed all latitude/longitude values were within Earth’s bounds.
+  - Verified 'year' column ranged between 1947 and 2013 to align with the global stress dataset.
+- **Dropped duplicate rows:** 2 exact duplicate entries were removed.
+- **Converted data types:**
+  - 'datetime' and 'date_posted' columns converted to proper datetime format.
+  - Categorical fields ('country', 'state', 'shape') cast to 'category' type for efficient storage.
+  - 'year' column cast to 'int' after NaNs were removed.
+
+### Feature Engineering Summary
+
+To prepare for analysis and regression, the following features were created:
+
+- **'year'** extracted from the 'datetime' column to serve as a temporal anchor for all analysis.
+- **'sightings_per_year'**: A new summary DataFrame was created by grouping the cleaned UFO dataset by 'year', counting the number of sightings annually.
+- The global stress dataset was also cleaned:
+  - Columns standardised and typed correctly.
+  - Aggregated into a yearly summary with:
+    - 'stress_event_count' (number of stress events per year)
+    - 'severity_sum' (total of severity scores per year).
+- Both datasets were filtered to a shared timeframe (1947–2013) and merged using a **left join**, preserving years with zero stress events for baseline comparison.
+- Missing values in the merged dataset (due to non-stress years) were filled with '0' to maintain continuity in analysis.
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
@@ -132,7 +162,7 @@ This project explores whether there is a measurable relationship between periods
 ## Ethical considerations
 * Approximately 12% of the rows in our UFO dataset were missing a recorded country. While it is technically possible to infer country from latitude and longitude via reverse geocoding, this was not implemented at scale due to performance and ethical limitations around API usage.
 
-Because this project is primarily concerned with **yearly patterns on a global scale**, the absence of country-level information does not significantly impact the core analysis or hypotheses being tested.
+Because this project is primarily concerned with **yearly patterns on a global scale**, the absence of country-level information does not significantly impact the core analysis or hypotheses being tested.git 
 
 ## Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
