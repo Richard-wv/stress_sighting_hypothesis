@@ -185,17 +185,22 @@ Because this project is primarily concerned with **yearly patterns on a global s
 - Python
 - Pandas
 - NumPy
-- Seaborne
+- Seaborn
 - MatPlotLib
 - Plotly
-- SKLearn
 - SciPy
+- SKLearn
+
 
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* Code Institute Learning Management System (LMS) for visualisation code,
+* https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet for markdown guidance.
+* https://en.wikipedia.org/wiki/Kurtosis for clarifying Kurtosis.
+* https://www.investopedia.com/terms/p/platykurtic.asp for explaining Platykurtic kurtosis.
+* ChatGPT for creating User Story portrait, Coding suggestions, project planning ideas, and 'sticking point' clarifications. 
+* Copilot for some coding suggestions and code annotation auto-completes. 
 
 ### Content 
 
