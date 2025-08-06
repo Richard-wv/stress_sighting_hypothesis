@@ -169,10 +169,32 @@ While the model’s R-Squared score was relatively low (0.14), this is not unexp
 * List the data analysis methods used and explain limitations or alternative approaches.
 * How did you structure the data analysis techniques. Justify your response.
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+### Use of Generative AI in Project Development
+
+Throughout the project, generative AI tools (specifically ChatGPT) were used to support idea development, design thinking, and code optimisation. During the early planning stages, I used AI to help brainstorm a suitable and original concept for the capstone — one that would align with course requirements but still reflect my own interests. This collaborative process helped shape the central hypothesis and business case.
+
+As the project progressed, I used AI to clarify areas I was less confident in — particularly around the more technical elements like regression modelling and interpreting correlation results. It also helped guide the structure of my Jupyter Notebooks and provided feedback on whether certain analytical approaches were appropriate.
+
+In the code itself, I occasionally used AI to review logic, catch errors, and refactor blocks for readability and efficiency. Importantly, I made sure to understand what was being suggested and adapt it to fit my own thinking, rather than copying anything blindly.
+
+Overall, AI tools acted as a supportive co-pilot — helping me stay on track, troubleshoot efficiently, and stay confident during parts of the project that felt outside my comfort zone.
+
 
 ## Ethical considerations
-* Approximately 12% of the rows in our UFO dataset were missing a recorded country. While it is technically possible to infer country from latitude and longitude via reverse geocoding, this was not implemented at scale due to performance and ethical limitations around API usage.
+
+Although this project doesn't involve personal or identifiable data, several ethical considerations were still taken into account during the design and analysis process:
+
+- **Data Source Integrity**: Both datasets used in this project — global UFO sightings (from NUFORC via Kaggle) and the manually curated global stress events — are public and non-sensitive. Care was taken to respect any licensing or attribution where relevant.
+
+- **Anonymity & Privacy**: The UFO dataset contains no personal information, names, or location data beyond city/country-level detail. There is no risk of re-identification.
+
+- **Bias and Interpretation**: This project explores a potentially sensitive cultural phenomenon (UFO sightings) alongside stress events such as wars, disasters, and economic crises. Care was taken not to trivialise or sensationalise these topics. The tone of analysis remains objective, exploratory, and grounded in the data.
+
+- **Causality vs Correlation**: The project avoids making strong causal claims and is transparent about the limitations of correlational methods. The goal is not to prove that stress causes UFO sightings, but to explore possible associations that may be shaped by broader psychological, societal, or media influences.
+
+- **Generative AI Use**: While generative AI tools were used to support planning and code efficiency, all decisions, interpretations, and final outputs reflect the author's own judgement and understanding.
+
+- Approximately 12% of the rows in our UFO dataset were missing a recorded country. While it is technically possible to infer country from latitude and longitude via reverse geocoding, this was not implemented at scale due to performance and ethical limitations around API usage.
 
 Because this project is primarily concerned with **yearly patterns on a global scale**, the absence of country-level information does not significantly impact the core analysis or hypotheses being tested.
 
@@ -211,9 +233,9 @@ Because this project is primarily concerned with **yearly patterns on a global s
 * https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet for markdown guidance.
 * https://en.wikipedia.org/wiki/Kurtosis for clarifying Kurtosis.
 * https://www.investopedia.com/terms/p/platykurtic.asp for explaining Platykurtic kurtosis.
-* ChatGPT for creating User Story portrait, Coding suggestions, project planning ideas, and 'sticking point' clarifications. 
+* ChatGPT for creating User Story portrait, project title card image, Coding suggestions, project planning ideas, and 'sticking point' clarifications. 
 * Copilot for some coding suggestions and code annotation auto-completes. 
-
+* Canva was used for creating the project title card and Persona Card. 
 ### Content 
 
 - The text for the Home page was taken from Wikipedia Article A
