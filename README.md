@@ -111,7 +111,7 @@ This project explores whether there is a measurable relationship between periods
 
 - Flag key media release years in the dataset (e.g., The X-Files in 1993, Independence Day in 1996)
 - Visually inspect anomalies in *sightings_per_year* via time-series plots
-- Compare spike magnitudes to adjacent years to investigate temporal influence 
+- Compare spike magnitudes to adjacent years to investigate temporal influence such as lagging. 
 
 ---
 
