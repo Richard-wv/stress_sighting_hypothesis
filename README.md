@@ -138,7 +138,9 @@ The UFO dataset underwent comprehensive cleaning to ensure analytical reliabilit
 
 ### Feature Engineering Summary
 
-To prepare for analysis and regression, the following features were created:
+Due to the absence of meaningful numerical data in our dataset, we had to create additional features in order to prepare for analysis and regression. 
+
+The following features were created:
 
 - **'year'** extracted from the 'datetime' column to serve as a temporal anchor for all analysis.
 - **'sightings_per_year'**: A new summary DataFrame was created by grouping the cleaned UFO dataset by 'year', counting the number of sightings annually.
@@ -149,6 +151,16 @@ To prepare for analysis and regression, the following features were created:
     - 'severity_sum' (total of severity scores per year).
 - Both datasets were filtered to a shared timeframe (1947–2013) and merged using a **left join**, preserving years with zero stress events for baseline comparison.
 - Missing values in the merged dataset (due to non-stress years) were filled with '0' to maintain continuity in analysis.
+
+### Exploratory Data Analysis and Regression Summary
+
+Our exploratory phase began with a thorough statistical overview of the dataset, including distributions, outliers, and visual trends. Each key variable (UFO sightings, stress event count, and severity) was examined individually and in relation to one another using line plots, boxplots, and correlation matrices.
+
+From there, we tested whether a simple correlation existed between global stress severity and the number of reported sightings per year. Initial results showed a weak-to-moderate positive correlation. However, by introducing a 1-year lag to the stress variables — to account for potential delay in public psychological response — we saw a noticeable improvement in correlation strength.
+
+This led to the construction of a linear regression model using 'severity_sum_lag1' as a predictor for 'sightings_per_year'. The model confirmed a modest positive relationship, with a slope of approximately 364 — indicating that for each point of increase in stress severity, we might expect an additional 364 sightings the following year.
+
+While the model’s R-Squared score was relatively low (0.14), this is not unexpected given the exploratory nature of the dataset. The regression was not intended for forecasting, but rather to support the hypothesis that societal stress may play a contributing role in increased UFO sighting reports — a theory our analysis consistently reinforced.
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
