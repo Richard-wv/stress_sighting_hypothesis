@@ -136,6 +136,12 @@ We then compared the distribution of 'sightings_per_year' between these two grou
 
 !['UFO Sightings Vs Global Stress Groups'](images/ufo_sightings_by_global_stress_group.png)
 
+This plot clearly shows that:
+
+- The **median** number of sightings is higher in High Stress years
+- The **spread** of sightings is wider under High Stress conditions
+- There are **notable outliers** (such as 7308 sightings in one Low Stress year)
+
 **Summary Statistics:**
 
 | Stress Group  | Count | Mean   | Median | Std Dev | Min | Max  |
