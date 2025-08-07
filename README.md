@@ -92,10 +92,36 @@ This project explores whether there is a measurable relationship between periods
 ### **H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.**
 
 **Validation Approach:**
-- Aggregate UFO sightings by year
-- Count stress events per year from the global stress events dataset
-- Perform Pearson correlation and linear regression using stress_event_count as the independent variable
-- Visualise results with a scatter plot and regression line
+To test this hypothesis, we:
+
+- Created a lagged version of the 'severity_sum' and 'stress_event_count' columns to account for delayed public or psychological response to global stress events.
+- Calculated the correlation between the lagged severity and annual UFO sighting counts.
+- Built a linear regression model using 'severity_sum_lag1' as the predictor for 'sightings_per_year'.
+- Visualised the relationship using a regression plot.
+
+### **Results & Conlusion:**
+
+![correlation_matrix 1 year lag](images/correlation_matrix_1yr_lag.png)
+
+![Linear Regression Plot with KDE](images/linear_regression_plot.png)
+
+|  Metric  |  Result  |
+|----------|----------|
+|  Slope  |  363.84  |
+|  Intercept  |  713.26  |
+|  R-squared  |  0.14  |
+|  Mean Squared Error (MSE)  |  2912525.87  |
+
+Our regression model suggests a modest positive linear relationship between lagged global stress severity ('severity_sum_lag1') and UFO sighting counts. The slope of ~364 indicates that, on average, each additional unit of stress severity is associated with an increase of approximately 364 reported UFO sightings in the following year.
+
+However, the model's R-squared value of 0.14 indicates that only about 14% of the variation in sightings can be explained by this variable alone. This is not unexpected, given the complexity of factors influencing public reporting behaviour, such as media, politics, internet culture, and other psychological or social variables not captured in the dataset.
+
+While not a predictive model, this regression helps quantify the correlation we've already observed and reinforces the central hypothesis: that global stress may play a contributing, if not dominant, role in UFO sighting trends.
+
+
+
+
+
 
 ### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
 
