@@ -191,6 +191,8 @@ For now, however, we **cannot confidently confirm** a statistically significant 
 - Visually inspect anomalies in *sightings_per_year* via time-series plots
 - Compare spike magnitudes to adjacent years to investigate temporal influence such as lagging. 
 
+---
+
 ![UFO Sightings Vs Media](images/ufo_sightings_vs_media.png)
 
 #### Visualistion Interpretation:
@@ -198,7 +200,7 @@ The visualisation suggests a notable shift beginning in 1993, coinciding with th
 
 While several media events cluster around minor fluctuations in sightings, *The X-Files* appears to mark a more significant inflection point in the data.
 
-#### Important Caveat:
+#### *Important Caveat:
 Although the timing aligns with our hypothesis, this analysis is exploratory in nature. The presence of a correlation between media events and increased sightings does not imply a causal relationship. In order to statistically validate this hypothesis, further modelling would be required, such as:
 
 - Causal impact analysis  
@@ -206,6 +208,8 @@ Although the timing aligns with our hypothesis, this analysis is exploratory in 
 - Time series decomposition or change point detection  
 
 These methods would help isolate the effect of media exposure from other variables and provide stronger support for or against the hypothesis.
+
+---
 
 #### Conclusion
 There is some visual evidence to suggest a relationship between cultural media events and increased UFO sighting reports. However, further statistical testing is necessary to move beyond correlation and confidently evaluate causality.
@@ -259,6 +263,23 @@ From there, we tested whether a simple correlation existed between global stress
 This led to the construction of a linear regression model using 'severity_sum_lag1' as a predictor for 'sightings_per_year'. The model confirmed a modest positive relationship, with a slope of approximately 364 — indicating that for each point of increase in stress severity, we might expect an additional 364 sightings the following year.
 
 While the model’s R-Squared score was relatively low (0.14), this is not unexpected given the exploratory nature of the dataset. The regression was not intended for forecasting, but rather to support the hypothesis that societal stress may play a contributing role in increased UFO sighting reports — a theory our analysis consistently reinforced.
+
+### Hypothesis Testing Summary
+
+Our hypothesis testing phase was focused, structured, and grounded in the exploratory findings from earlier stages of analysis. Three key hypotheses were proposed, each testing a different facet of the relationship between reported UFO sightings and global or cultural stressors.
+
+**H1: Global stress events are positively correlated with an increase in reported UFO sightings.**  
+Using linear regression and correlation analysis, we identified a weak but positive correlation between annual stress severity and sightings, particularly after applying a one-year lag to stress data. This supports the idea that psychological or sociocultural effects of stress may not be immediate, but delayed. While our R-squared score was modest (0.14), it still indicates some level of explanatory influence. 
+
+**H2: Years with a higher number of stress events will show significantly more UFO sightings than low-stress years.**  
+We tested this hypothesis using the Mann-Whitney U Test, following normality checks that showed non-Gaussian distributions in both groups. Results showed a **p-value of 0.086**, indicating that while there may be a trend toward higher sightings during high-stress years, it wasn’t statistically significant at the 95% confidence level. That said, the result still adds texture to our overall findings and raises interesting questions for further investigation.
+
+**H3: Cultural media events (e.g. UFO-related films or series) correlate with short-term spikes in sighting reports.**  
+By overlaying key media event years onto our time-series data, we observed a compelling increase in sightings following the 1993 premiere of *The X-Files*. While other events had less impact, this particular cultural inflection point aligns with a lasting change in sighting frequency. Though the evidence here is anecdotal and visual rather than statistical, it raises valid questions about the influence of media narratives on public perception and behaviour.
+
+**Conclusion:**  
+Our hypothesis testing phase didn’t aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown — one that doesn’t offer easy answers, but certainly sparks deeper inquiry.
+
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
