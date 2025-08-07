@@ -92,6 +92,7 @@ This project explores whether there is a measurable relationship between periods
 ### **H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.**
 
 **Validation Approach:**
+
 To test this hypothesis, we:
 
 - Created a lagged version of the 'severity_sum' and 'stress_event_count' columns to account for delayed public or psychological response to global stress events.
@@ -99,7 +100,7 @@ To test this hypothesis, we:
 - Built a linear regression model using 'severity_sum_lag1' as the predictor for 'sightings_per_year'.
 - Visualised the relationship using a regression plot.
 
-### **Results & Conlusion:**
+### **Results & Conclusion:**
 
 ![correlation_matrix 1 year lag](images/correlation_matrix_1yr_lag.png)
 
@@ -133,6 +134,8 @@ We then compared the distribution of 'sightings_per_year' between these two grou
 
 ---
 
+!['UFO Sightings Vs Global Stress Groups'](images/ufo_sightings_by_global_stress_group.png)
+
 **Summary Statistics:**
 
 | Stress Group  | Count | Mean   | Median | Std Dev | Min | Max  |
@@ -164,9 +167,9 @@ Given the non-normal distribution of our data, we applied the **Mann–Whitney U
 
 ---
 
-### Conclusion:
+### Results & Conclusion:
 
-The p-value was **greater than 0.05**, meaning the observed difference in UFO sightings **was not statistically significant** at the 95% confidence level. Therefore we can not reject the null hypothesis.
+The p-value was **greater than 0.05**, meaning the observed difference in UFO sightings **was not statistically significant** at the 95% confidence level. Therefore, we can not reject the null hypothesis.
 
 That said, the result **hovers close to the significance threshold**, suggesting a **potential trend**. With a larger dataset or additional contextual variables, this hypothesis might gain further support.
 
