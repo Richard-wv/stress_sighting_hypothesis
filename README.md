@@ -191,6 +191,26 @@ For now, however, we **cannot confidently confirm** a statistically significant 
 - Visually inspect anomalies in *sightings_per_year* via time-series plots
 - Compare spike magnitudes to adjacent years to investigate temporal influence such as lagging. 
 
+![UFO Sightings Vs Media](images/ufo_sightings_vs_media.png)
+
+#### Visualistion Interpretation:
+The visualisation suggests a notable shift beginning in 1993, coinciding with the debut of *The X-Files*. From that year onward, there is a clear and sustained rise in reported sightings, which may reflect changing cultural attitudes, increased public interest, or a broader shift in how anomalous experiences are interpreted and reported.
+
+While several media events cluster around minor fluctuations in sightings, *The X-Files* appears to mark a more significant inflection point in the data.
+
+#### Important Caveat:
+Although the timing aligns with our hypothesis, this analysis is exploratory in nature. The presence of a correlation between media events and increased sightings does not imply a causal relationship. In order to statistically validate this hypothesis, further modelling would be required, such as:
+
+- Causal impact analysis  
+- Interrupted time series (ITS)  
+- Time series decomposition or change point detection  
+
+These methods would help isolate the effect of media exposure from other variables and provide stronger support for or against the hypothesis.
+
+#### Conclusion
+There is some visual evidence to suggest a relationship between cultural media events and increased UFO sighting reports. However, further statistical testing is necessary to move beyond correlation and confidently evaluate causality.
+
+
 ---
 
 ## Project Plan
