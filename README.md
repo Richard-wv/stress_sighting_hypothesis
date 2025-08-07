@@ -107,10 +107,10 @@ To test this hypothesis, we:
 
 |  Metric  |  Result  |
 |----------|----------|
-|  Slope  |  363.84  |
-|  Intercept  |  713.26  |
-|  R-squared  |  0.14  |
-|  Mean Squared Error (MSE)  |  2912525.87  |
+|  **Slope**  |  363.84  |
+|  **Intercept**  |  713.26  |
+|  **R-squared**  |  0.14  |
+|  **Mean Squared Error (MSE)**  |  2912525.87  |
 
 Our regression model suggests a modest positive linear relationship between lagged global stress severity ('severity_sum_lag1') and UFO sighting counts. The slope of ~364 indicates that, on average, each additional unit of stress severity is associated with an increase of approximately 364 reported UFO sightings in the following year.
 
@@ -118,18 +118,61 @@ However, the model's R-squared value of 0.14 indicates that only about 14% of th
 
 While not a predictive model, this regression helps quantify the correlation we've already observed and reinforces the central hypothesis: that global stress may play a contributing, if not dominant, role in UFO sighting trends.
 
-
-
-
-
+---
 
 ### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
 
 **Validation Approach:**
-- Sum severity scores per year (severity_sum)
-- Regress *sightings_per_year* against *severity_sum*
-- Compare R² and regression coefficients with **H1**
-- Visualise and interpret strength of correlation
+
+To test this hypothesis, we began by classifying each year in our dataset as either:
+
+- **High Stress** (severity_sum >= 3)
+- **Low Stress** (severity_sum < 3)
+
+We then compared the distribution of 'sightings_per_year' between these two groups.
+
+---
+
+**Summary Statistics:**
+
+| Stress Group  | Count | Mean   | Median | Std Dev | Min | Max  |
+|---------------|--------|--------|--------|---------|-----|------|
+| **High Stress**   | 18     | 1717.7 | 271.5  | 1967.5  | 27  | 5076 |
+| **Low Stress**    | 49     | 946.7  | 214.0  | 1773.2  | 7   | 7308 |
+
+Although the **mean** number of sightings was **higher** in high-stress years, we couldn’t rely solely on descriptive stats, especially given the spread and skew of the data.
+
+---
+
+### Normality Testing:
+
+We used the **Shapiro–Wilk test** to assess the distribution of each group:
+
+- **Low Stress Group p-value**: 0.0000
+- **High Stress Group p-value**: 0.0005
+
+Both groups showed significant deviation from normality, ruling out the use of a t-test.
+
+---
+
+### Mann–Whitney U Test:
+
+Given the non-normal distribution of our data, we applied the **Mann–Whitney U Test**:
+
+- **U statistic**: 562.5  
+- **p-value**: **0.087**
+
+---
+
+### Conclusion:
+
+The p-value was **greater than 0.05**, meaning the observed difference in UFO sightings **was not statistically significant** at the 95% confidence level. Therefore we can not reject the null hypothesis.
+
+That said, the result **hovers close to the significance threshold**, suggesting a **potential trend**. With a larger dataset or additional contextual variables, this hypothesis might gain further support.
+
+For now, however, we **cannot confidently confirm** a statistically significant difference in UFO sightings between high-stress and low-stress years.
+
+---
 
 ### **H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.**
 
