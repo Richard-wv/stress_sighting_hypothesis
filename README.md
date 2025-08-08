@@ -92,10 +92,10 @@ Our Dashboard must empower users like Alex to:
 
 ---
 
-> ## Hypotheses
+>## Hypotheses
 This project explores whether there is a measurable relationship between periods of global stress and the volume of reported UFO sightings. The following hypotheses will be tested using aggregated time-series data and statistical methods, including linear regression.
 
-> ### **H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.**
+>### **H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.**
 
 **Validation Approach:**
 
@@ -127,7 +127,7 @@ While not a predictive model, this regression helps quantify the correlation we'
 
 ---
 
-> ### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
+>### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
 
 **Validation Approach:**
 
@@ -189,7 +189,7 @@ For now, however, we **cannot confidently confirm** a statistically significant 
 
 ---
 
-> ### **H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.**
+>### **H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.**
 
 **Validation Approach:**
 
