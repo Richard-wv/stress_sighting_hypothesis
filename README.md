@@ -280,14 +280,31 @@ By overlaying key media event years onto our time-series data, we observed a com
 **Conclusion:**  
 Our hypothesis testing phase didn’t aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown — one that doesn’t offer easy answers, but certainly sparks deeper inquiry.
 
+## Mapping Business Requirements to Visualisations
 
-## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+| Business Requirement | Dashboard Feature | Rationale |
+|----------------------|-------------------|-----------|
+| Identify correlations between stress events and UFO sightings | Line chart showing UFO sightings per year overlaid with stress events and media events | Shows potential alignment between reported sightings and sociocultural triggers |
+| Understand *why* things matter, not just *when* they happened | Tooltips or info cards with annotations explaining key spikes or media/cultural events | Adds contextual richness to raw trends, allowing narrative interpretation |
+| Extract usable insights for journalism | Exportable visuals with captions and consistent styling | Ensures clarity and portability for use in media |
+| Ensure transparency and credibility | Clean layout with clear data sources and explanation of methods | Promotes trust and reproducibility of findings |
 
-## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
+
+## Analysis Techniques Used
+
+- **Correlation Analysis:** Used to quantify the linear relationship between stress severity and UFO sightings. Limitation: Doesn’t account for confounding variables.
+- **Lag Feature Engineering:** Introduced to account for delayed public response. Simple yet effective for this exploratory context.
+- **Linear Regression:** Used for H1 to measure explanatory strength of stress severity. Limitation: Low R² score reflects many unaccounted variables.
+- **Normality Testing (Shapiro–Wilk):** Ensured the appropriate statistical test was used (non-parametric).
+- **Mann–Whitney U Test:** Chosen over t-test due to non-normal distribution for H2.
+- **Exploratory Visualisation:** Used to validate H3 hypothesis. Limitation: Visual-only; no causal modelling.
+
+**Alternative methods considered (but not implemented due to scope/time):**
+- Causal impact analysis
+- Time series decomposition
+- Sentiment analysis of public/media discourse
+
+
 ### Use of Generative AI in Project Development
 
 Throughout the project, generative AI tools (specifically ChatGPT) were used to support idea development, design thinking, and code optimisation. During the early planning stages, I used AI to help brainstorm a suitable and original concept for the capstone — one that would align with course requirements but still reflect my own interests. This collaborative process helped shape the central hypothesis and business case.
