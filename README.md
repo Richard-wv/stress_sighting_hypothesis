@@ -1,13 +1,13 @@
 # ![Project Header Image](images/project_header_img.png)
 
-# The Stress-Sighting Hypothesis
+># The Stress-Sighting Hypothesis
 ### A Data-Driven Analysis of Global Events and Reports of the Unknown.
 
 **The Stress-Sighting Hypothesis** has the project goal of investigating whether there is a meaningful correlation between the frequency of reported UFO sightings and periods of heightened cultural, political or global stress, using historical event data and publicly reported sightings. 
 
 ---
 
-## Dataset Content
+>## Dataset Content
 * Our primary dataset is taken from the Kaggle dataset 'UFO Sightings' found here: https://www.kaggle.com/datasets/NUFORC/ufo-sightings/data
 
 It is a cleaned public dataset derived from NUFORC (National UFO Reporting Center) reports. It contains 80,332 records of reported UFO sightings worldwide, spanning over a century.
@@ -50,19 +50,23 @@ Whilst not exhaustive, this dataset serves as a representative proxy for fluctua
 
 Severity ratings were assigned subjectively, based on the perceived scale and psychological weight of each event, and are intended to offer an optional variable for weighted analysis. 
 
-## Business Requirements
+---
+
+>## Business Requirements
 In an era shaped by information saturation, political polarisation, and global crises, public perception is increasingly complex and emotionally charged. For journalists, researchers, and communicators, understanding how people respond to uncertainty is as important as the events themselves.
 
 This project explores the potential relationship between **reported UFO sightings** and **global stress events**, not to investigate extraterrestrial phenomena, but to examine whether these sightings reflect **underlying patterns of public anxiety, media influence, and cultural tension.**
 
 The outcome is a data-driven dashboard designed to support those working at the intersection of **data**, **storytelling**, and **public insight**.
 
-### Persona & User Story:
+---
+
+>### Persona & User Story:
 ![Alex Holloway – Persona Card](images/alex_holloway_persona_card.png)
 
 **Alex Holloway** is an investigative journalist, known for in-depth features that combine cultural analysis with data storytelling. They work with both independent media outlets and major publishers, seeking to explore how society processes uncertainty — from political unrest to media myths.
 
-### Alex's Requirements:
+>### Alex's Requirements:
 - **Reveal Patterns**
 
 Alex needs to identify correlations between historical periods of stress and spikes in UFO reporting - fast, clearly and without technical issues. 
@@ -86,10 +90,12 @@ Our Dashboard must empower users like Alex to:
 - Uncover social signals hiding in unconventional data
 - Offer the audience a grounded perspective on how fear, media, and uncertainty intersect. 
 
-## Hypotheses
+---
+
+> ## Hypotheses
 This project explores whether there is a measurable relationship between periods of global stress and the volume of reported UFO sightings. The following hypotheses will be tested using aggregated time-series data and statistical methods, including linear regression.
 
-### **H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.**
+> ### **H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.**
 
 **Validation Approach:**
 
@@ -121,7 +127,7 @@ While not a predictive model, this regression helps quantify the correlation we'
 
 ---
 
-### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
+> ### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
 
 **Validation Approach:**
 
@@ -183,7 +189,7 @@ For now, however, we **cannot confidently confirm** a statistically significant 
 
 ---
 
-### **H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.**
+> ### **H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.**
 
 **Validation Approach:**
 
@@ -211,13 +217,13 @@ These methods would help isolate the effect of media exposure from other variabl
 
 ---
 
-#### Conclusion
+>### Conclusion
 There is some visual evidence to suggest a relationship between cultural media events and increased UFO sighting reports. However, further statistical testing is necessary to move beyond correlation and confidently evaluate causality.
 
 
 ---
 
-## Project Plan
+>## Project Plan
 ### Data Cleaning and Feature Engineering Summary
 
 The UFO dataset underwent comprehensive cleaning to ensure analytical reliability. Key steps included:
@@ -280,7 +286,7 @@ By overlaying key media event years onto our time-series data, we observed a com
 **Conclusion:**  
 Our hypothesis testing phase didn’t aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown — one that doesn’t offer easy answers, but certainly sparks deeper inquiry.
 
-## Mapping Business Requirements to Visualisations
+>## Mapping Business Requirements to Visualisations
 
 | Business Requirement | Dashboard Feature | Rationale |
 |----------------------|-------------------|-----------|
@@ -290,7 +296,7 @@ Our hypothesis testing phase didn’t aim to prove anything definitively, but ra
 | Ensure transparency and credibility | Clean layout with clear data sources and explanation of methods | Promotes trust and reproducibility of findings |
 
 
-## Analysis Techniques Used
+>## Analysis Techniques Used
 
 - **Correlation Analysis:** Used to quantify the linear relationship between stress severity and UFO sightings. Limitation: Doesn’t account for confounding variables.
 - **Lag Feature Engineering:** Introduced to account for delayed public response. Simple yet effective for this exploratory context.
@@ -316,7 +322,7 @@ In the code itself, I occasionally used AI to review logic, catch errors, and re
 Overall, AI tools acted as a supportive co-pilot — helping me stay on track, troubleshoot efficiently, and stay confident during parts of the project that felt outside my comfort zone.
 
 
-## Ethical considerations
+>## Ethical considerations
 
 Although this project doesn't involve personal or identifiable data, several ethical considerations were still taken into account during the design and analysis process:
 
@@ -334,24 +340,24 @@ Although this project doesn't involve personal or identifiable data, several eth
 
 Because this project is primarily concerned with **yearly patterns on a global scale**, the absence of country-level information does not significantly impact the core analysis or hypotheses being tested.
 
-## Dashboard Design
+>## Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
 * Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
 * How were data insights communicated to technical and non-technical audiences?
 * Explain how the dashboard was designed to communicate complex data insights to different audiences. 
 
-## Unfixed Bugs
+>## Unfixed Bugs
 * Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
 * Did you recognise gaps in your knowledge, and how did you address them?
 * If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
 
-## Development Roadmap
+>## Development Roadmap
 * What challenges did you face, and what strategies were used to overcome these challenges?
 * What new skills or tools do you plan to learn next based on your project experience? 
 
-## Deployment
+>## Deployment
 
-## Main Data Analysis Libraries
+>## Main Data Analysis Libraries
 - Python
 - Pandas
 - NumPy
@@ -363,7 +369,7 @@ Because this project is primarily concerned with **yearly patterns on a global s
 
 
 
-## Credits 
+>## Credits 
 
 * Code Institute Learning Management System (LMS) for visualisation code,
 * https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet for markdown guidance.
@@ -372,6 +378,7 @@ Because this project is primarily concerned with **yearly patterns on a global s
 * ChatGPT for creating User Story portrait, project title card image, Coding suggestions, project planning ideas, and 'sticking point' clarifications. 
 * Copilot for some coding suggestions and code annotation auto-completes. 
 * Canva was used for creating the project title card and Persona Card. 
+
 ### Content 
 
 - The text for the Home page was taken from Wikipedia Article A
@@ -385,5 +392,5 @@ Because this project is primarily concerned with **yearly patterns on a global s
 
 
 
-## Acknowledgements (optional)
+>## Acknowledgements
 * Thank the people who provided support through this project.
