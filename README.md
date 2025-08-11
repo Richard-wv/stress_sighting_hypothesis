@@ -1,5 +1,41 @@
 # ![Project Header Image](images/project_header_img.png)
 
+>## Table of Contents
+- [Executive Summary](#executive-summary)
+- [Dataset Content](#dataset-content)
+- [Business Requirements](#business-requirements)
+  - [Persona & User Story](#persona--user-story)
+  - [Alex's Requirements](#alexs-requirements)
+  - [Value Proposition](#value-proposition)
+- [Hypotheses](#hypotheses)
+  - [H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.](#h1-there-is-a-positive-correlation-between-the-number-of-global-stress-events-in-a-given-year-and-the-number-of-ufo-sightings)
+  - [H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.](#h2-years-with-higher-total-stress-severity-scores-are-associated-with-a-greater-number-of-ufo-sightings)
+  - [H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.](#h3-cultural-media-events-such-as-the-release-of-ufo-themed-films-or-television-series-correspond-with-noticeable-short-term-spikes-in-reported-sightings)
+- [Key Insights](#key-insights)
+- [Conclusion](#conclusion)
+- [Project Plan](#project-plan)
+  - [Data Cleaning and Feature Engineering Summary](#data-cleaning-and-feature-engineering-summary)
+  - [Feature Engineering Summary](#feature-engineering-summary)
+  - [Exploratory Data Analysis and Regression Summary](#exploratory-data-analysis-and-regression-summary)
+  - [Hypothesis Testing Summary](#hypothesis-testing-summary)
+- [Mapping Business Requirements to Visualisations](#mapping-business-requirements-to-visualisations)
+- [Analysis Techniques Used](#analysis-techniques-used)
+  - [Use of Generative AI in Project Development](#use-of-generative-ai-in-project-development)
+- [Ethical considerations](#ethical-considerations)
+- [Dashboard Design](#dashboard-design)
+  - [Colour Palette for Dashboard](#colour-palette-for-dashboard)
+- [Unfixed Bugs](#unfixed-bugs)
+- [Limitations](#limitations)
+- [Development Roadmap](#development-roadmap)
+- [Deployment](#deployment)
+- [Main Data Analysis Libraries](#main-data-analysis-libraries)
+- [Credits](#credits)
+  - [Media](#media)
+- [Acknowledgements](#acknowledgements)
+- [Closing Statement](#closing-statement)
+
+---
+
 ># The Stress-Sighting Hypothesis
 ### A Data-Driven Analysis of Global Events and Reports of the Unknown.
 
@@ -442,6 +478,8 @@ No online deployment was used in this project, and the Power BI Dashboard file h
 >## Credits 
 
 - Code Institute Learning Management System (LMS) for visualisation code suggestions.
+- https://github.com/Code-Institute-Org/data-analytics-template/tree/main Data Analytics GitHub Project template provided by Code Institute.
+- https://github.com/Code-Institute-Solutions/da-README-template README template provided by Code Institute.
 - https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet for markdown guidance.
 - https://en.wikipedia.org/wiki/Kurtosis for clarifying Kurtosis.
 - https://www.investopedia.com/terms/p/platykurtic.asp for explaining Platykurtic kurtosis.
