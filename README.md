@@ -166,7 +166,7 @@ We used the **Shapiro–Wilk test** to assess the distribution of each group:
 - **Low Stress Group p-value**: 0.0000
 - **High Stress Group p-value**: 0.0005
 
-Both groups showed significant deviation from normality, ruling out the use of a t-test.
+Both groups showed significant deviation from normality (positive skewness and low kurtosis), ruling out the use of a t-test.
 
 ---
 
@@ -216,6 +216,17 @@ Although the timing aligns with our hypothesis, this analysis is exploratory in 
 These methods would help isolate the effect of media exposure from other variables and provide stronger support for or against the hypothesis.
 
 ---
+>### Key Insights
+
+- **Modest positive correlation** between lagged stress severity and UFO sighting counts, suggesting that global stress may contribute to increased sightings, but is not the sole factor (R-squared = 0.14).
+
+- **Media influence appears stronger** in shaping sighting trends, particularly following the 1993 debut of 'The X-Files', and the 1996 release of 'Independence Day' which coincided with a sustained rise in reports.
+
+- **High-stress years** tend to show higher median sightings compared to low-stress years, though the difference was not statistically significant at the 95% confidence level (p = 0.086).
+
+- **Cultural and psychological factors likely interact:** neither stress nor media fully explains sighting fluctuations in isolation, pointing toward a multi-factor influence model.
+
+- **Visual storytelling through the dashboard** enables filtering and comparison by stress levels and media presence, making complex relationships accessible to both technical and non-technical users.
 
 >### Conclusion
 There is some visual evidence to suggest a relationship between cultural media events and increased UFO sighting reports. However, further statistical testing is necessary to move beyond correlation and confidently evaluate causality.
@@ -284,7 +295,7 @@ We tested this hypothesis using the Mann-Whitney U Test, following normality che
 By overlaying key media event years onto our time-series data, we observed a compelling increase in sightings following the 1993 premiere of *The X-Files*. While other events had less impact, this particular cultural inflection point aligns with a lasting change in sighting frequency. Though the evidence here is anecdotal and visual rather than statistical, it raises valid questions about the influence of media narratives on public perception and behaviour.
 
 **Conclusion:**  
-Our hypothesis testing phase didn’t aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown; one that doesn’t offer easy answers, but certainly sparks deeper inquiry.
+Our hypothesis testing phase didn't aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown; one that doesn't offer easy answers, but certainly sparks deeper inquiry.
 
 >## Mapping Business Requirements to Visualisations
 
@@ -359,50 +370,61 @@ From a design standpoint, the layout and colour palette were chosen for **clarit
 ---
 
 >## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+
+- No technical bugs were identified in the final version of the project. However, during development, I recognised gaps in my knowledge regarding certain hypothesis testing techniques and their interpretation. To address this, I sought additional learning resources, generative AI explanation, and clarified my understanding through practical application within the project workflow.
+
+- In terms of accessibility, I invited a friend with deuteranomaly (a form of red-green colour blindness) to review the dashboard colour theme. Their feedback informed adjustments to the palette, ensuring that all visuals remain clear and interpretable for colour-blind users.
+
 
 >## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+
+One of the main challenges I faced during this project was navigating and effectively using Power BI. While I successfully built the dashboard, there were moments where I struggled to locate certain features or adjust settings within its (notably cluttered) interface. This was addressed through a mix of trial-and-error, online documentation, and AI consultation, but it highlighted the need for more dedicated Power BI practice.
+
+Another challenge was applying and interpreting hypothesis testing methods. While I understood the broad concepts, my statistical confidence and ability to interpret results could be stronger. I overcame some of this by working through additional resources and applying techniques directly within the project, but I plan to continue developing this skill set to strengthen future analysis work.
+
+**Next Steps:**
+- Dedicate time to deepening my Power BI skills, particularly around advanced visualisation techniques, DAX, and user interaction design.
+- Expand my statistical knowledge, with a focus on hypothesis testing, regression modelling, and interpreting outputs confidently.
+- Explore further accessibility best practices to ensure future dashboards are inclusive for all audiences.
+
 
 >## Deployment
 
+No online deployment was used in this project, and the Power BI Dashboard file has been added to our /dashboard project directory and repository for consideration and assessment. 
+
 >## Main Data Analysis Libraries
-- Python
-- Pandas
-- NumPy
-- Seaborn
-- MatPlotLib
-- Plotly
-- SciPy
-- SKLearn
+- Python - primary coding language.
+- Pandas - for data cleaning, transformation, merging datasets and feature engineering.
+- NumPy - for numerical operations, handling arrays, and supporting calculations in Pandas workflow.
+- Seaborn - for statistical data visualisation, such as regression plot and distribution charts.
+- MatPlotLib - for creating static plots during exploratory analysis.
+- Plotly - for interactive visualisations within Jupyter Notebook 2_data_analysis.ipynb
+- SciPy - for statistical testing, including the Shapiro-Wilk and Mann-Whitney U tests.
+- Scikit-Learn - for regression modelling and calculating evaluation metrics. 
 
 
 
 >## Credits 
 
-* Code Institute Learning Management System (LMS) for visualisation code,
-* https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet for markdown guidance.
-* https://en.wikipedia.org/wiki/Kurtosis for clarifying Kurtosis.
-* https://www.investopedia.com/terms/p/platykurtic.asp for explaining Platykurtic kurtosis.
-* ChatGPT for creating User Story portrait, project title card image, Coding suggestions, project planning ideas, and 'sticking point' clarifications. 
-* Copilot for some coding suggestions and code annotation auto-completes. 
-* Canva was used for creating the project title card and Persona Card. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- Code Institute Learning Management System (LMS) for visualisation code suggestions.
+- https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet for markdown guidance.
+- https://en.wikipedia.org/wiki/Kurtosis for clarifying Kurtosis.
+- https://www.investopedia.com/terms/p/platykurtic.asp for explaining Platykurtic kurtosis.
+- https://seaborn.pydata.org/tutorial/color_palettes.html for visualisation colour palette selection.
+- ChatGPT for creating User Story portrait, project title card image, Coding suggestions, project planning ideas, and 'sticking point' clarifications. 
+- Copilot for some coding suggestions and code annotation auto-completes. 
+- https://www.canva.com was used for creating the project title card and Persona Card. 
+- https://shorturl.at/NfSzd NHS PTSD Symptoms timeframe information used for Lag Analysis research. (shorturl.at used to truncate hyperlink address)
+- https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm For Skewness and Kurtosis clarification. 
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+- Images for user story and project header were created using ChatGPT to avoid potential ethical and licensing conflicts.
 
 
 
 >## Acknowledgements
-* Thank the people who provided support through this project.
+- Code Institute Staff for their continuous support throughout my learning journey.
+- My Data Analytics learning cohort for moral support.
+- Family and friends for moral support and understanding during my learning journey. 
+- Apple Music for assistance in providing 'focus fuel' throughout the project.
