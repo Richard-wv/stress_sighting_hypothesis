@@ -277,6 +277,9 @@ There is some visual evidence to suggest a relationship between cultural media e
 ---
 
 >## Project Plan
+
+Project planning managed by GitHub Project Kanban Board. Found [here](https://github.com/users/Richard-wv/projects/4)
+
 ### Data Cleaning and Feature Engineering Summary
 
 The UFO dataset underwent comprehensive cleaning to ensure analytical reliability. Key steps included:
