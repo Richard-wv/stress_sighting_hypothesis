@@ -340,18 +340,23 @@ Although this project doesn't involve personal or identifiable data, several eth
 
 Because this project is primarily concerned with **yearly patterns on a global scale**, the absence of country-level information does not significantly impact the core analysis or hypotheses being tested.
 
+---
+
 >## Dashboard Design
 
 The dashboard was designed across **two pages**, each serving a distinct purpose in communicating the findings of *The Stress-Sighting Hypothesis* to both technical and non-technical audiences.  
 
 **Page 1** focuses on the **core narrative**, showing the overall UFO sightings trend over time, the relationship between lagged global stress severity and sightings, and the differences in average sightings between high-stress and low-stress years. A set of slicer buttons allows users to filter by stress group and media event years, enabling interactive exploration of the data. This page was built to present the main story quickly and clearly, even for those unfamiliar with statistical methods.
 
-![]()
+![Stress Hypothesis Dashboard p1](images/tsh_dashboard_p1.png)
 
 **Page 2** expands on the analysis with **comparative insights**, including a combined timeline showing sightings alongside media event markers, a grouped bar chart comparing sightings averages by stress and media category, and a direct comparison of media vs non-media years. Key metric cards (e.g. total years analysed, high-stress years, media event years, and peak sighting year) give immediate context.  
 
-From a design standpoint, the layout and colour palette were chosen for **clarity and accessibility**, including adjustments to ensure usability for colour-blind viewers. Each visualisation is paired with a concise insight or summary, ensuring complex data relationships are communicated in plain English. The use of consistent titles, legends, and annotations bridges the gap between technical interpretation and accessible storytelling.
+![Stress Hypothesis Dashboard p2](images/tsh_dashboard_p2.png)
 
+From a design standpoint, the layout and colour palette were chosen for **clarity and accessibility**, including adjustments to ensure usability for colour-blind viewers (Actually tested by a non-technical user with Deuteranopia.). Consistent colour theming was use throughout the dashboard for continuity, and to emphasise a clean and professional presentation.  Each visualisation is paired with a concise insight or summary, ensuring complex data relationships are communicated in plain English. The use of consistent titles, legends, and annotations bridges the gap between technical interpretation and accessible storytelling.
+
+---
 
 >## Unfixed Bugs
 * Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
