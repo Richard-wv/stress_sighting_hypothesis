@@ -5,12 +5,19 @@
 
 **The Stress-Sighting Hypothesis** has the project goal of investigating whether there is a meaningful correlation between the frequency of reported UFO sightings and periods of heightened cultural, political or global stress, using historical event data and publicly reported sightings. 
 
+>## Executive Summary
+This project investigates whether there is a measurable relationship between reported UFO sightings and periods of heightened societal stress, using historical sighting data from NUFORC and a manually curated dataset of major global events.  
+
+Data was cleaned, merged, and analysed using Python and visualised via a two-page Power BI dashboard. Three hypotheses explored correlations between stress events, media influence, and sighting trends using regression analysis, non-parametric testing, and exploratory visualisation.
+
+The findings suggest a modest positive correlation between lagged stress severity and sightings, with media exposure (particularly the debut of *The X-Files*) appearing to have a stronger influence on trends. While results are not statistically conclusive, they point toward a complex, multi-factor relationship worthy of further study.
+
 ---
 
 >## Dataset Content
 * Our primary dataset is taken from the Kaggle dataset 'UFO Sightings' found here: https://www.kaggle.com/datasets/NUFORC/ufo-sightings/data
 
-It is a cleaned public dataset derived from NUFORC (National UFO Reporting Center) reports. It contains 80,332 records of reported UFO sightings worldwide, spanning over a century.
+It is a cleaned public dataset derived from NUFORC (National UFO Reporting Centre) reports. It contains 80,332 records of reported UFO sightings worldwide, spanning over a century.
 
 ### Dataset Overview: 
 - **Date Range:** January 1st, 1910 - September 9, 2013
@@ -19,7 +26,7 @@ It is a cleaned public dataset derived from NUFORC (National UFO Reporting Cente
     - **datetime:** Date and time of the sighting
     - **city, state, country**: Geographic location
     - **shape:** Reported shape of the object (e.g., disk, light, triangle)
-    -**duration (seconds), duration (hours/min):** Estimated duration
+    - **duration (seconds), duration (hours/min):** Estimated duration
     - **comments:** Eyewitness description
     - **latitude, longitude:** Coordinates
 
@@ -28,11 +35,11 @@ This dataset will be aggregated by year to explore temporal trends in UFO report
 - Our secondary dataset is the **global_stress_events.csv**
 This dataset aims to contextualise major geopolitical, environmental, economic, and cultural events that are likely to contribute to collective public stress or uncertainty.
 
-Rather than relying on a single predefined dataset, this list was manually curated to ensure it aligned specifically with the project’s thematic focus: the intersection of cultural perception, public anxiety, and the unknown. Events were selected based on their:
+Rather than relying on a single predefined dataset, this list was manually curated to ensure it aligned specifically with the project's thematic focus: the intersection of cultural perception, public anxiety, and the unknown. Events were selected based on their:
 - Global or national scale of impact
 - Media visibility and saturation
 - Potential to influence public mood, fear, or psychological tension
-- Relevance to war, political instability, health crises, economic collapse, or culturally significant media related to UFOs and extraterrestrial life
+- Relevance to war, political instability, health crises, economic collapse, or culturally significant media related to UFOs and extraterrestrial life.
 
 ### Dataset Overview:
 - **Date Range:** 1947-2023
@@ -55,7 +62,7 @@ Severity ratings were assigned subjectively, based on the perceived scale and ps
 >## Business Requirements
 In an era shaped by information saturation, political polarisation, and global crises, public perception is increasingly complex and emotionally charged. For journalists, researchers, and communicators, understanding how people respond to uncertainty is as important as the events themselves.
 
-This project explores the potential relationship between **reported UFO sightings** and **global stress events**, not to investigate extraterrestrial phenomena, but to examine whether these sightings reflect **underlying patterns of public anxiety, media influence, and cultural tension.**
+This project explores the potential relationship between **reported UFO sightings** and **global stress events**, not to investigate extra-terrestrial phenomena, but to examine whether these sightings reflect **underlying patterns of public anxiety, media influence, and cultural tension.**
 
 The outcome is a data-driven dashboard designed to support those working at the intersection of **data**, **storytelling**, and **public insight**.
 
@@ -101,10 +108,12 @@ This project explores whether there is a measurable relationship between periods
 
 To test this hypothesis, we:
 
-- Created a lagged version of the 'severity_sum' and 'stress_event_count' columns to account for delayed public or psychological response to global stress events.
+- Created a lagged version of the *'severity_sum'* and *'stress_event_count'* columns to account for delayed public or psychological response to global stress events.
 - Calculated the correlation between the lagged severity and annual UFO sighting counts.
-- Built a linear regression model using 'severity_sum_lag1' as the predictor for 'sightings_per_year'.
+- Built a linear regression model using *'severity_sum_lag1'* as the predictor for *'sightings_per_year'*.
 - Visualised the relationship using a regression plot.
+
+---
 
 ### **Results & Conclusion:**
 
@@ -119,7 +128,7 @@ To test this hypothesis, we:
 |  **R-squared**  |  0.14  |
 |  **Mean Squared Error (MSE)**  |  2912525.87  |
 
-Our regression model suggests a modest positive linear relationship between lagged global stress severity ('severity_sum_lag1') and UFO sighting counts. The slope of ~364 indicates that, on average, each additional unit of stress severity is associated with an increase of approximately 364 reported UFO sightings in the following year.
+Our regression model suggests a modest positive linear relationship between lagged global stress severity (*'severity_sum_lag1'*) and UFO sighting counts. The slope of ~364 indicates that, on average, each additional unit of stress severity is associated with an increase of approximately 364 reported UFO sightings in the following year.
 
 However, the model's R-squared value of 0.14 indicates that only about 14% of the variation in sightings can be explained by this variable alone. This is not unexpected, given the complexity of factors influencing public reporting behaviour, such as media, politics, internet culture, and other psychological or social variables not captured in the dataset.
 
@@ -136,7 +145,7 @@ To test this hypothesis, we began by classifying each year in our dataset as eit
 - **High Stress** (severity_sum >= 3)
 - **Low Stress** (severity_sum < 3)
 
-We then compared the distribution of 'sightings_per_year' between these two groups.
+We then compared the distribution of *'sightings_per_year'* between these two groups.
 
 ---
 
@@ -181,9 +190,7 @@ Given the non-normal distribution of our data, we applied the **Mann–Whitney U
 
 ### Results & Conclusion:
 
-The p-value was **greater than 0.05**, meaning the observed difference in UFO sightings **was not statistically significant** at the 95% confidence level. Therefore, we can not reject the null hypothesis.
-
-That said, the result **hovers close to the significance threshold**, suggesting a **potential trend**. With a larger dataset or additional contextual variables, this hypothesis might gain further support.
+The p-value was **greater than 0.05**, meaning the observed difference in UFO sightings **was not statistically significant** at the 95% confidence level. Therefore, we can not reject the null hypothesis. That said, the result **hovers close to the significance threshold**, suggesting a **potential trend**. With a larger dataset or additional contextual variables, this hypothesis might gain further support.
 
 For now, however, we **cannot confidently confirm** a statistically significant difference in UFO sightings between high-stress and low-stress years.
 
@@ -201,7 +208,7 @@ For now, however, we **cannot confidently confirm** a statistically significant 
 
 ![UFO Sightings Vs Media](images/ufo_sightings_vs_media.png)
 
-#### Visualistion Interpretation:
+#### Visualisation Interpretation:
 The visualisation suggests a notable shift beginning in 1993, coinciding with the debut of *The X-Files*. From that year onward, there is a clear and sustained rise in reported sightings, which may reflect changing cultural attitudes, increased public interest, or a broader shift in how anomalous experiences are interpreted and reported.
 
 While several media events cluster around minor fluctuations in sightings, *The X-Files* appears to mark a more significant inflection point in the data.
@@ -231,7 +238,6 @@ These methods would help isolate the effect of media exposure from other variabl
 >### Conclusion
 There is some visual evidence to suggest a relationship between cultural media events and increased UFO sighting reports. However, further statistical testing is necessary to move beyond correlation and confidently evaluate causality.
 
-
 ---
 
 >## Project Plan
@@ -241,19 +247,19 @@ The UFO dataset underwent comprehensive cleaning to ensure analytical reliabilit
 
 - **Standardising column names** to lowercase with consistent formatting.
 - **Handling missing values:**
-  - Filled missing 'country', 'state', and 'shape' values with 'unknown'.
-  - Removed 694 rows (~0.86%) where 'datetime' was missing or malformed, resulting in invalid 'year' values.
+  - Filled missing *'country'*, *'state'*, and *'shape'* values with 'unknown'.
+  - Removed 694 rows (~0.86%) where *'datetime'* was missing or malformed, resulting in invalid *'year'* values.
 - **Cleaning problematic numeric columns:**
-  - Converted 'duration (seconds)' and 'latitude' to numeric using 'pd.to_numeric()' with coercion.
+  - Converted *'duration (seconds)'* and *'latitude'* to numeric using 'pd.to_numeric()' with coercion.
   - Dropped 4 rows with invalid or non-numeric duration/latitude values.
 - **Ensuring valid data ranges:**
   - Confirmed all latitude/longitude values were within Earth’s bounds.
-  - Verified 'year' column ranged between 1947 and 2013 to align with the global stress dataset.
+  - Verified *'year'* column ranged between 1947 and 2013 to align with the global stress dataset.
 - **Dropped duplicate rows:** 2 exact duplicate entries were removed.
 - **Converted data types:**
-  - 'datetime' and 'date_posted' columns converted to proper datetime format.
-  - Categorical fields ('country', 'state', 'shape') cast to 'category' type for efficient storage.
-  - 'year' column cast to 'int' after NaNs were removed.
+  - *'datetime'* and *'date_posted'* columns converted to proper datetime format.
+  - Categorical fields (*'country'*, *'state'*, *'shape'*) cast to 'category' type for efficient storage.
+  - *'year'* column cast to 'int' after NaNs were removed.
 
 ### Feature Engineering Summary
 
@@ -261,13 +267,13 @@ Due to the absence of meaningful numerical data in our dataset, we had to create
 
 The following features were created:
 
-- **'year'** extracted from the 'datetime' column to serve as a temporal anchor for all analysis.
-- **'sightings_per_year'**: A new summary DataFrame was created by grouping the cleaned UFO dataset by 'year', counting the number of sightings annually.
+- ***'year'*** extracted from the 'datetime' column to serve as a temporal anchor for all analysis.
+- ***'sightings_per_year'***: A new summary DataFrame was created by grouping the cleaned UFO dataset by *'year'*, counting the number of sightings annually.
 - The global stress dataset was also cleaned:
   - Columns standardised and typed correctly.
   - Aggregated into a yearly summary with:
-    - 'stress_event_count' (number of stress events per year)
-    - 'severity_sum' (total of severity scores per year).
+    - *'stress_event_count'* (number of stress events per year)
+    - *'severity_sum'* (total of severity scores per year).
 - Both datasets were filtered to a shared timeframe (1947–2013) and merged using a **left join**, preserving years with zero stress events for baseline comparison.
 - Missing values in the merged dataset (due to non-stress years) were filled with '0' to maintain continuity in analysis.
 
@@ -275,11 +281,11 @@ The following features were created:
 
 Our exploratory phase began with a thorough statistical overview of the dataset, including distributions, outliers, and visual trends. Each key variable (UFO sightings, stress event count, and severity) was examined individually and in relation to one another using line plots, boxplots, and correlation matrices.
 
-From there, we tested whether a simple correlation existed between global stress severity and the number of reported sightings per year. Initial results showed a weak-to-moderate positive correlation. However, by introducing a 1-year lag to the stress variables — to account for potential delay in public psychological response — we saw a noticeable improvement in correlation strength.
+From there, we tested whether a simple correlation existed between global stress severity and the number of reported sightings per year. Initial results showed a weak-to-moderate positive correlation. However, by introducing a 1-year lag to the stress variables to account for potential delay in public psychological response, we saw a noticeable improvement in correlation strength.
 
-This led to the construction of a linear regression model using 'severity_sum_lag1' as a predictor for 'sightings_per_year'. The model confirmed a modest positive relationship, with a slope of approximately 364 — indicating that for each point of increase in stress severity, we might expect an additional 364 sightings the following year.
+This led to the construction of a linear regression model using *'severity_sum_lag1'* as a predictor for *'sightings_per_year'*. The model confirmed a modest positive relationship, with a slope of approximately 364, indicating that for each point of increase in stress severity, we might expect an additional 364 sightings the following year.
 
-While the model’s R-Squared score was relatively low (0.14), this is not unexpected given the exploratory nature of the dataset. The regression was not intended for forecasting, but rather to support the hypothesis that societal stress may play a contributing role in increased UFO sighting reports — a theory our analysis consistently reinforced.
+While the model's R-Squared score was relatively low (0.14), this is not unexpected given the exploratory nature of the dataset. The regression was not intended for forecasting, but rather to support the hypothesis that societal stress may play a contributing role in increased UFO sighting reports - a theory our analysis consistently reinforced.
 
 ### Hypothesis Testing Summary
 
@@ -289,10 +295,12 @@ Our hypothesis testing phase was focused, structured, and grounded in the explor
 Using linear regression and correlation analysis, we identified a weak but positive correlation between annual stress severity and sightings, particularly after applying a one-year lag to stress data. This supports the idea that psychological or sociocultural effects of stress may not be immediate, but delayed. While our R-squared score was modest (0.14), it still indicates some level of explanatory influence. 
 
 **H2: Years with a higher number of stress events will show significantly more UFO sightings than low-stress years.**  
-We tested this hypothesis using the Mann-Whitney U Test, following normality checks that showed non-Gaussian distributions in both groups. Results showed a **p-value of 0.086**, indicating that while there may be a trend toward higher sightings during high-stress years, it wasn’t statistically significant at the 95% confidence level. That said, the result still adds texture to our overall findings and raises interesting questions for further investigation.
+We tested this hypothesis using the Mann-Whitney U Test, following normality checks that showed non-Gaussian distributions in both groups. Results showed a **p-value of 0.086**, indicating that while there may be a trend toward higher sightings during high-stress years, it wasn't statistically significant at the 95% confidence level. That being said, the result still adds texture to our overall findings and raises interesting questions for further investigation.
 
 **H3: Cultural media events (e.g. UFO-related films or series) correlate with short-term spikes in sighting reports.**  
-By overlaying key media event years onto our time-series data, we observed a compelling increase in sightings following the 1993 premiere of *The X-Files*. While other events had less impact, this particular cultural inflection point aligns with a lasting change in sighting frequency. Though the evidence here is anecdotal and visual rather than statistical, it raises valid questions about the influence of media narratives on public perception and behaviour.
+By overlaying key media event years onto our time-series data, we observed a compelling increase in sightings following the 1993 premiere of *The X-Files*. While other events had less impact, this particular cultural inflection point aligns with a lasting change in sighting frequency. 
+
+Though the evidence here is anecdotal and visual rather than statistical, it raises valid questions about the influence of media narratives on public perception and behaviour.
 
 **Conclusion:**  
 Our hypothesis testing phase didn't aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown; one that doesn't offer easy answers, but certainly sparks deeper inquiry.
@@ -306,14 +314,15 @@ Our hypothesis testing phase didn't aim to prove anything definitively, but rath
 | Extract usable insights for journalism | Exportable visuals with captions and consistent styling | Ensures clarity and portability for use in media |
 | Ensure transparency and credibility | Clean layout with clear data sources and explanation of methods | Promotes trust and reproducibility of findings |
 
+---
 
 >## Analysis Techniques Used
 
-- **Correlation Analysis:** Used to quantify the linear relationship between stress severity and UFO sightings. Limitation: Doesn’t account for confounding variables.
+- **Correlation Analysis:** Used to quantify the linear relationship between stress severity and UFO sightings. Limitation: Doesn't account for confounding variables.
 - **Lag Feature Engineering:** Introduced to account for delayed public response. Simple yet effective for this exploratory context.
-- **Linear Regression:** Used for H1 to measure explanatory strength of stress severity. Limitation: Low R-squared score reflects many unaccounted variables.
+- **Linear Regression:** Used for H1 to measure explanatory strength of stress severity. Limitation: Low R-squared score reflects many unaccounted for variables.
 - **Normality Testing (Shapiro–Wilk):** Ensured the appropriate statistical test was used (non-parametric).
-- **Mann–Whitney U Test:** Chosen over t-test due to non-normal distribution for H2.
+- **Mann–Whitney U Test:** Chosen over t-test due to non-normal distribution for H1 & H2.
 - **Exploratory Visualisation:** Used to validate H3 hypothesis. Limitation: Visual-only; no causal modelling.
 
 **Alternative methods considered (but not implemented due to scope/time):**
@@ -321,12 +330,11 @@ Our hypothesis testing phase didn't aim to prove anything definitively, but rath
 - Time series decomposition
 - Sentiment analysis of public/media discourse
 
-
 ### Use of Generative AI in Project Development
 
-Throughout the project, generative AI tools (specifically ChatGPT) were used to support idea development, design thinking, and code optimisation. During the early planning stages, I used AI to help brainstorm a suitable and original concept for the capstone — one that would align with course requirements but still reflect my own interests. This collaborative process helped shape the central hypothesis and business case.
+Throughout the project, generative AI tools (specifically ChatGPT) were used to support idea development, design thinking, and code optimisation. During the early planning stages, I used AI to help brainstorm a suitable and original concept for the capstone, one that would align with course requirements but still reflect my own interests. This collaborative process helped shape the central hypothesis and business case.
 
-As the project progressed, I used AI to clarify areas I was less confident in — particularly around the more technical elements like regression modelling and interpreting correlation results. It also helped guide the structure of my Jupyter Notebooks and provided feedback on whether certain analytical approaches were appropriate.
+As the project progressed, I used AI to clarify areas I was less confident in, particularly around the more technical elements like regression modelling and interpreting correlation results. It also helped guide the structure of my Jupyter Notebooks and provided feedback on whether certain analytical approaches were appropriate.
 
 In the code itself, I occasionally used AI to review logic, catch errors, and refactor blocks for readability and efficiency. Importantly, I made sure to understand what was being suggested and adapt it to fit my own thinking, rather than copying anything blindly.
 
@@ -365,7 +373,19 @@ The dashboard was designed across **two pages**, each serving a distinct purpose
 
 ![Stress Hypothesis Dashboard p2](images/tsh_dashboard_p2.png)
 
-From a design standpoint, the layout and colour palette were chosen for **clarity and accessibility**, including adjustments to ensure usability for colour-blind viewers (Actually tested by a non-technical user with Deuteranomaly.). Consistent colour theming was use throughout the dashboard for continuity, and to emphasise a clean and professional aesthetic.  Each visualisation is paired with a concise insight or summary, ensuring complex data relationships are communicated in plain English. Typographical considerations were also made to ensure consistency across all visualisations and pages, and the typeface (Verdana) was selected for clarity, readability, and overall accessibility.  The use of consistent titles, legends, and annotations bridges the gap between technical interpretation and accessible storytelling.
+From a design standpoint, the layout and colour palette were chosen for **clarity and accessibility**, including adjustments to ensure usability for colour-blind viewers (Actually tested by a non-technical user with Deuteranomaly.). Consistent colour theming was use throughout the dashboard for continuity, and to emphasise a clean and professional aesthetic. 
+
+Each visualisation is paired with a concise insight or summary, ensuring complex data relationships are communicated in plain English. Typographical considerations were also made to ensure consistency across all visualisations and pages, and the typeface (Verdana) was selected for clarity, readability, and overall accessibility.  The use of consistent titles, legends, and annotations bridges the gap between technical interpretation and accessible storytelling.
+
+### Colour Palette for Dashboard
+
+|  Colour  |  Hash Code  |
+|----------|-------------|
+|  Black  |  #000000  |
+|  White  |  #FFFFFF  |
+|  Light Blue  |  #6f8ba8  |
+|  Dark Blue  |  #0F3D6E  |
+|  Red  |  #FD0000  |
 
 ---
 
@@ -375,6 +395,18 @@ From a design standpoint, the layout and colour palette were chosen for **clarit
 
 - In terms of accessibility, I invited a friend with deuteranomaly (a form of red-green colour blindness) to review the dashboard colour theme. Their feedback informed adjustments to the palette, ensuring that all visuals remain clear and interpretable for colour-blind users.
 
+---
+
+>## Limitations
+- The global stress events dataset was manually curated and contains only 35 records, which limits statistical power.
+- Severity scores are subjective and based on qualitative judgement, not quantitative metrics.
+- The UFO sightings dataset may contain cultural and reporting biases, as NUFORC reports are voluntary submissions.
+- Geographic analysis was not performed due to limited availability of consistent location data across both datasets.
+- Media influence was assessed qualitatively via visual inspection rather than formal causal modelling.
+
+Future work could address these limitations by expanding datasets, applying automated sentiment analysis to historical media coverage, and incorporating geospatial analysis.
+
+---
 
 >## Development Roadmap
 
@@ -387,22 +419,25 @@ Another challenge was applying and interpreting hypothesis testing methods. Whil
 - Expand my statistical knowledge, with a focus on hypothesis testing, regression modelling, and interpreting outputs confidently.
 - Explore further accessibility best practices to ensure future dashboards are inclusive for all audiences.
 
+---
 
 >## Deployment
 
 No online deployment was used in this project, and the Power BI Dashboard file has been added to our /dashboard project directory and repository for consideration and assessment. 
 
+---
+
 >## Main Data Analysis Libraries
-- Python - primary coding language.
-- Pandas - for data cleaning, transformation, merging datasets and feature engineering.
-- NumPy - for numerical operations, handling arrays, and supporting calculations in Pandas workflow.
-- Seaborn - for statistical data visualisation, such as regression plot and distribution charts.
-- MatPlotLib - for creating static plots during exploratory analysis.
-- Plotly - for interactive visualisations within Jupyter Notebook 2_data_analysis.ipynb
-- SciPy - for statistical testing, including the Shapiro-Wilk and Mann-Whitney U tests.
-- Scikit-Learn - for regression modelling and calculating evaluation metrics. 
+- **Python** - primary coding language.
+- **Pandas** - for data cleaning, transformation, merging datasets and feature engineering.
+- **NumPy** - for numerical operations, handling arrays, and supporting calculations in Pandas workflow.
+- **Seaborn** - for statistical data visualisation, such as regression plot and distribution charts.
+- **MatPlotLib** - for creating static plots during exploratory analysis.
+- **Plotly** - for interactive visualisations within Jupyter Notebook 2_data_analysis.ipynb
+- **SciPy** - for statistical testing, including the Shapiro-Wilk and Mann-Whitney U tests.
+- **Scikit-Learn** - for regression modelling and calculating evaluation metrics. 
 
-
+---
 
 >## Credits 
 
@@ -421,10 +456,21 @@ No online deployment was used in this project, and the Power BI Dashboard file h
 
 - Images for user story and project header were created using ChatGPT to avoid potential ethical and licensing conflicts.
 
-
+---
 
 >## Acknowledgements
 - Code Institute Staff for their continuous support throughout my learning journey.
 - My Data Analytics learning cohort for moral support.
 - Family and friends for moral support and understanding during my learning journey. 
 - Apple Music for assistance in providing 'focus fuel' throughout the project.
+- My cat, "Cersei" for reminding me to take regular coding breaks. 
+
+---
+
+>## Closing Statement
+This capstone project has enhanced my technical and analytical skills, particularly in Power BI, hypothesis testing, and data storytelling. The project highlighted the importance of project working time estimations, as the data cleaning phase took considerably longer than I initially thought. It has also reinforced the importance of clear communication when presenting complex patterns to mixed audiences.  
+
+While exploratory in nature, the project provides a foundation for further, more rigorous research into the intersection of societal stress, cultural influence, and reported anomalous phenomena.
+
+---
+
