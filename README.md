@@ -284,7 +284,7 @@ We tested this hypothesis using the Mann-Whitney U Test, following normality che
 By overlaying key media event years onto our time-series data, we observed a compelling increase in sightings following the 1993 premiere of *The X-Files*. While other events had less impact, this particular cultural inflection point aligns with a lasting change in sighting frequency. Though the evidence here is anecdotal and visual rather than statistical, it raises valid questions about the influence of media narratives on public perception and behaviour.
 
 **Conclusion:**  
-Our hypothesis testing phase didn’t aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown — one that doesn’t offer easy answers, but certainly sparks deeper inquiry.
+Our hypothesis testing phase didn’t aim to prove anything definitively, but rather to explore and evaluate patterns in the data through thoughtful experimentation. The results reflect a complex, nuanced relationship between stress, culture, and the unknown; one that doesn’t offer easy answers, but certainly sparks deeper inquiry.
 
 >## Mapping Business Requirements to Visualisations
 
@@ -300,7 +300,7 @@ Our hypothesis testing phase didn’t aim to prove anything definitively, but ra
 
 - **Correlation Analysis:** Used to quantify the linear relationship between stress severity and UFO sightings. Limitation: Doesn’t account for confounding variables.
 - **Lag Feature Engineering:** Introduced to account for delayed public response. Simple yet effective for this exploratory context.
-- **Linear Regression:** Used for H1 to measure explanatory strength of stress severity. Limitation: Low R² score reflects many unaccounted variables.
+- **Linear Regression:** Used for H1 to measure explanatory strength of stress severity. Limitation: Low R-squared score reflects many unaccounted variables.
 - **Normality Testing (Shapiro–Wilk):** Ensured the appropriate statistical test was used (non-parametric).
 - **Mann–Whitney U Test:** Chosen over t-test due to non-normal distribution for H2.
 - **Exploratory Visualisation:** Used to validate H3 hypothesis. Limitation: Visual-only; no causal modelling.
@@ -319,7 +319,7 @@ As the project progressed, I used AI to clarify areas I was less confident in �
 
 In the code itself, I occasionally used AI to review logic, catch errors, and refactor blocks for readability and efficiency. Importantly, I made sure to understand what was being suggested and adapt it to fit my own thinking, rather than copying anything blindly.
 
-Overall, AI tools acted as a supportive co-pilot — helping me stay on track, troubleshoot efficiently, and stay confident during parts of the project that felt outside my comfort zone.
+Overall, AI tools acted as a supportive co-pilot; helping me stay on track, troubleshoot efficiently, and stay confident during parts of the project that felt outside my comfort zone.
 
 
 >## Ethical considerations
@@ -354,7 +354,7 @@ The dashboard was designed across **two pages**, each serving a distinct purpose
 
 ![Stress Hypothesis Dashboard p2](images/tsh_dashboard_p2.png)
 
-From a design standpoint, the layout and colour palette were chosen for **clarity and accessibility**, including adjustments to ensure usability for colour-blind viewers (Actually tested by a non-technical user with Deuteranopia.). Consistent colour theming was use throughout the dashboard for continuity, and to emphasise a clean and professional presentation.  Each visualisation is paired with a concise insight or summary, ensuring complex data relationships are communicated in plain English. The use of consistent titles, legends, and annotations bridges the gap between technical interpretation and accessible storytelling.
+From a design standpoint, the layout and colour palette were chosen for **clarity and accessibility**, including adjustments to ensure usability for colour-blind viewers (Actually tested by a non-technical user with Deuteranomaly.). Consistent colour theming was use throughout the dashboard for continuity, and to emphasise a clean and professional aesthetic.  Each visualisation is paired with a concise insight or summary, ensuring complex data relationships are communicated in plain English. Typographical considerations were also made to ensure consistency across all visualisations and pages, and the typeface (Verdana) was selected for clarity, readability, and overall accessibility.  The use of consistent titles, legends, and annotations bridges the gap between technical interpretation and accessible storytelling.
 
 ---
 
