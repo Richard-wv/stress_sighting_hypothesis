@@ -140,6 +140,8 @@ This project explores whether there is a measurable relationship between periods
 
 >### **H1: There is a positive correlation between the number of global stress events in a given year and the number of UFO sightings.**
 
+**Why Alex cares:** This would give Alex a measurable way to link public anxiety during turbulent times to increased reporting of unusual phenomena, strengthening cultural narratives with data.
+
 **Validation Approach:**
 
 To test this hypothesis, we:
@@ -173,6 +175,8 @@ While not a predictive model, this regression helps quantify the correlation we'
 ---
 
 >### **H2: Years with higher total stress severity scores are associated with a greater number of UFO sightings.**
+
+**Why Alex cares:** This would help Alex identify whether particularly intense years of societal stress correlate with spikes in sightings, offering potential lead angles for investigative features.
 
 **Validation Approach:**
 
@@ -234,6 +238,8 @@ For now, however, we **cannot confidently confirm** a statistically significant 
 
 >### **H3: Cultural media events, (such as the release of UFO-themed films or television series) correspond with noticeable short-term spikes in reported sightings.**
 
+**Why Alex cares:** This would allow Alex to explore how popular culture shapes public perception of the unknown, giving their audience insight into the interplay between media and mass reporting behaviour.
+
 **Validation Approach:**
 
 - Flag key media release years in the dataset (e.g., The X-Files in 1993, Independence Day in 1996)
@@ -270,6 +276,8 @@ These methods would help isolate the effect of media exposure from other variabl
 - **Cultural and psychological factors likely interact:** neither stress nor media fully explains sighting fluctuations in isolation, pointing toward a multi-factor influence model.
 
 - **Visual storytelling through the dashboard** enables filtering and comparison by stress levels and media presence, making complex relationships accessible to both technical and non-technical users.
+
+These insights give Alex a foundation of credible, data-backed observations that can be adapted into compelling storylines, from investigative articles to public talks. 
 
 >### Conclusion
 There is some visual evidence to suggest a relationship between cultural media events and increased UFO sighting reports. However, further statistical testing is necessary to move beyond correlation and confidently evaluate causality.
@@ -353,6 +361,8 @@ Our hypothesis testing phase didn't aim to prove anything definitively, but rath
 | Extract usable insights for journalism | Exportable visuals with captions and consistent styling | Ensures clarity and portability for use in media |
 | Ensure transparency and credibility | Clean layout with clear data sources and explanation of methods | Promotes trust and reproducibility of findings |
 
+By aligning these features with Alex's workflow, our dashboard would not only meet analytical goals but also support rapid narrative development for data-driven storytelling. 
+
 ---
 
 >## Analysis Techniques Used
@@ -415,6 +425,8 @@ The dashboard was designed across **two pages**, each serving a distinct purpose
 From a design standpoint, the layout and colour palette were chosen for **clarity and accessibility**, including adjustments to ensure usability for colour-blind viewers (Actually tested by a non-technical user with Deuteranomaly.). Consistent colour theming was use throughout the dashboard for continuity, and to emphasise a clean and professional aesthetic. 
 
 Each visualisation is paired with a concise insight or summary, ensuring complex data relationships are communicated in plain English. Typographical considerations were also made to ensure consistency across all visualisations and pages, and the typeface (Verdana) was selected for clarity, readability, and overall accessibility.  The use of consistent titles, legends, and annotations bridges the gap between technical interpretation and accessible storytelling.
+
+For Alex, this means being able to quickly switch between exploring data interactively and extracting clear, ready-to-publish visuals that maintain narrative integrity.
 
 ### Colour Palette for Dashboard
 
