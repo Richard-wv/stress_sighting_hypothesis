@@ -457,6 +457,30 @@ For Alex, this means being able to quickly switch between exploring data interac
 
 Future work could address these limitations by expanding datasets, applying automated sentiment analysis to historical media coverage, and incorporating geospatial analysis.
 
+### Future Analysis Opportunities
+
+While this project was exploratory in nature, there are several promising directions for deeper or more rigorous analysis that could build on the current work:
+
+- **Expand the Global Stress Events Dataset:**  
+  Increase the number of recorded events, incorporating regional events alongside global ones. This could improve statistical power and granularity.
+
+- **Refine Severity Scoring:**  
+  Replace the subjective 1–5 scale with a more objective measure, potentially derived from sentiment analysis of historical news coverage or public opinion data.
+
+- **Causal Modelling:**  
+  Apply methods such as *Interrupted Time Series* or *Causal Impact Analysis* to evaluate whether specific events (e.g., media releases or global crises) have a statistically measurable effect on sighting frequencies.
+
+- **Geospatial Analysis:**  
+  Incorporate geographic coordinates to explore whether certain regions exhibit stronger stress–sighting correlations, potentially revealing cultural or demographic influences.
+
+- **Temporal Decomposition:**  
+  Use time series decomposition or change point detection to separate long-term trends from short-term fluctuations, clarifying whether observed spikes are anomalies or part of broader cycles.
+
+- **Media Influence Modelling:**  
+  Quantify media exposure more precisely (e.g., number of news articles, television ratings) to better isolate the effect of cultural events from other factors.
+
+These enhancements could lead to more nuanced insights and stronger statistical conclusions, helping to clarify the interplay between societal stress, media, and public reporting behaviour.
+
 ---
 
 >## Development Roadmap
